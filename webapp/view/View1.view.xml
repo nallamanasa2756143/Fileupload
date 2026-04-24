@@ -1,0 +1,40 @@
+<mvc:View controllerName="fileupload.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified">
+    <Page id="page" title="{i18n>title}">
+        <Panel >
+            <Table items="{object>/toppings}">
+            <headerToolbar>
+                <Toolbar >
+                    <Title text="ToolBar Header"></Title>
+                    <ToolbarSpacer ></ToolbarSpacer>
+                    <Button icon="sap-icon://add" press="onAddExcelData"></Button>
+                </Toolbar>
+            </headerToolbar>
+
+            <columns>
+                <Column >
+                    <Text text="ToppingName"></Text>
+                </Column>
+                <Column >
+                    <Text text="Brand"></Text>
+                </Column>
+                <Column >
+                    <Text text="Price"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{object>ToppingName}"></Text>
+                        <Text text="{object>Brand}"></Text>
+                        <Text text="{object>Price}"></Text>
+                    </cells>
+                </ColumnListItem>
+            </items>
+            
+            </Table>
+        </Panel>
+    </Page>
+</mvc:View>
